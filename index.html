@@ -38,6 +38,17 @@
       max-width: 1000px;
       margin: auto;
     }
+    .sobre-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .sobre-container img {
+      max-width: 150px;
+      height: auto;
+      border-radius: 10px;
+    }
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -97,10 +108,12 @@
   </nav>
 
   <section id="sobre">
-    <h2>Sobre Nós</h2>
+    <div class="sobre-container">
+      <h2>Sobre Nós</h2>
+      <img src="logo3.jpeg" alt="Equipe Elite Care">
+    </div>
     <p><strong>Quem somos:</strong> A ELITE CARE nasceu com o propósito de oferecer cuidados humanizados e especializados no conforto do lar. Nossa missão é proporcionar qualidade de vida, acolhimento e bem-estar para nossos pacientes e suas famílias. Valorizamos o respeito, a empatia e o profissionalismo em cada atendimento.</p>
     <p><strong>Experiência e qualificação:</strong> Contamos com uma equipe multidisciplinar de profissionais altamente capacitados, de cuidadores e enfermeiros. Todos são treinados e preparados para lidar com as mais diversas necessidades clínicas e emocionais.</p>
-
   </section>
 
   <section id="servicos">
@@ -164,7 +177,7 @@
     </form>
     <p><strong>Telefone fixo:</strong> (63) xxxx-xxxx<br>
     <strong>WhatsApp:</strong> (63) 99992-7405<br>
-    <strong>E-mail:</strong> email@eamil </p>
+    <strong>E-mail:</strong> email@eamil</p>
   </section>
 
   <footer>
