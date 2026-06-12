@@ -516,6 +516,162 @@
   .res-pill.res-e { background: #2a2a0a; color: #f1c40f; }
   .res-pill.res-d { background: #3a1a1a; color: #e74c3c; }
 
+  /* ===== AGENDA ===== */
+  #agenda { background: var(--cinza-claro); }
+
+  .agenda-grupo { margin-bottom: 2.5rem; }
+
+  .agenda-competicao {
+    font-size: 11px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--vermelho);
+    margin-bottom: 1rem; padding-bottom: 0.4rem;
+    border-bottom: 2px solid rgba(192,25,46,0.2);
+  }
+
+  .agenda-jogo {
+    background: var(--branco);
+    border-left: 4px solid var(--preto);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .agenda-jogo:hover { border-color: var(--vermelho); transform: translateX(4px); }
+
+  .agenda-jogo-meta {
+    display: flex; align-items: center; gap: 1rem;
+    font-size: 12px; color: #777; margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  .agenda-jogo-meta span { display: flex; align-items: center; gap: 5px; }
+
+  .agenda-jogo-times {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1rem;
+  }
+  .agenda-time {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 0.4rem; flex: 1;
+  }
+  .agenda-time-escudo {
+    width: 52px; height: 52px;
+    background: var(--cinza-claro);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px; color: var(--preto);
+    border: 2px solid #ddd;
+    text-align: center; line-height: 1.2;
+    overflow: hidden;
+  }
+  .agenda-time-escudo img { width: 100%; height: 100%; object-fit: cover; }
+  .agenda-time-nome {
+    font-size: 12px; font-weight: 700; color: var(--preto);
+    text-align: center; line-height: 1.3;
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .agenda-time.destaque .agenda-time-escudo { border-color: var(--vermelho); }
+  .agenda-time.destaque .agenda-time-nome { color: var(--vermelho); }
+
+  .agenda-vs {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px; color: #ccc;
+    flex-shrink: 0; padding: 0 0.5rem;
+  }
+
+  .agenda-badge-proximo {
+    display: inline-block;
+    background: var(--vermelho); color: white;
+    font-size: 10px; font-weight: 700; letter-spacing: 1px;
+    padding: 2px 8px; margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+
+  /* ===== GALERIA ===== */
+  #galeria { background: var(--preto); }
+  #galeria .section-title { color: var(--branco); }
+  #galeria .section-eyebrow { color: #e84d60; }
+
+  .galeria-tabs {
+    display: flex; gap: 0; flex-wrap: wrap;
+    border-bottom: 2px solid #2a2a2a;
+    margin-bottom: 2rem;
+  }
+  .galeria-tab {
+    padding: 10px 18px;
+    background: transparent; border: none;
+    border-bottom: 3px solid transparent; margin-bottom: -2px;
+    color: rgba(255,255,255,0.45); font-size: 13px; font-weight: 600;
+    letter-spacing: 0.5px; cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .galeria-tab:hover { color: rgba(255,255,255,0.8); }
+  .galeria-tab.ativo { color: var(--vermelho); border-bottom-color: var(--vermelho); }
+
+  .galeria-tab-content { display: none; }
+  .galeria-tab-content.ativo { display: block; }
+
+  .galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .galeria-card {
+    background: #1c1c1c;
+    border: 1px solid #2a2a2a;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+    cursor: pointer;
+  }
+  .galeria-card:hover { transform: translateY(-4px); border-color: var(--vermelho); }
+
+  .galeria-card-img {
+    width: 100%; aspect-ratio: 4/3;
+    background: #2a2a2a;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden; position: relative;
+  }
+  .galeria-card-img img { width: 100%; height: 100%; object-fit: cover; }
+  .galeria-card-img .galeria-placeholder {
+    display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+    color: #444;
+  }
+  .galeria-placeholder-icon { font-size: 40px; }
+  .galeria-placeholder-text { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
+
+  .galeria-card-info {
+    padding: 0.85rem 1rem;
+  }
+  .galeria-card-titulo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 17px; color: var(--branco); letter-spacing: 1px;
+    margin-bottom: 0.2rem;
+  }
+  .galeria-card-desc { font-size: 12px; color: #666; }
+
+  .galeria-aviso {
+    grid-column: 1 / -1;
+    text-align: center; padding: 3rem 1rem;
+    color: #444;
+  }
+  .galeria-aviso-icon { font-size: 48px; margin-bottom: 1rem; display: block; }
+  .galeria-aviso-text { font-size: 14px; letter-spacing: 1px; }
+
+  /* Upload hint card */
+  .galeria-add-card {
+    background: transparent;
+    border: 2px dashed #333;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    aspect-ratio: 4/3; gap: 0.75rem;
+    color: #444; cursor: default;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .galeria-add-card:hover { border-color: var(--vermelho); color: #666; }
+  .galeria-add-card span:first-child { font-size: 36px; }
+  .galeria-add-card span:last-child { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
+
 </style>
 </head>
 <body>
@@ -532,7 +688,9 @@
     <a href="#competicoes">Competições</a>
     <a href="#modalidades">Modalidades</a>
     <a href="#elenco">Elenco</a>
-   <a href="#jogos">Jogos</a>
+    <a href="#agenda">Agenda</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#jogos">Jogos</a>
   </div>
 </nav>
 
@@ -541,7 +699,7 @@
   <div class="hero-content">
     <img class="hero-escudo" src="LOGOSITE.png" alt="Escudo Camargo FC">
     <div class="hero-text">
-      <p class="hero-sub">Fundado em 2015 </p>
+      <p class="hero-sub">Fundado em 2015 · Camargo FC</p>
       <h1>Camargo <span>Futebol Clube</span></h1>
       <div class="hero-stats">
         <div class="hero-stat">
@@ -554,7 +712,7 @@
         </div>
         <div class="hero-stat">
           <div class="hero-stat-num">23</div>
-          <div class="hero-stat-label">Atletas no elenco do Futebol</div>
+          <div class="hero-stat-label">Atletas no elenco</div>
         </div>
         <div class="hero-stat">
           <div class="hero-stat-num">4</div>
@@ -3223,6 +3381,191 @@
   </div>
 </section>
 
+<!-- AGENDA -->
+<section id="agenda">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">14ª Liga Paraíso de Futebol 2026 · 2ª Divisão</p>
+      <h2 class="section-title">Agenda de Jogos</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <!-- Jogo 1 -->
+    <div class="agenda-grupo">
+      <div class="agenda-jogo">
+        <span class="agenda-badge-proximo">Próximo jogo</span>
+        <div class="agenda-jogo-meta">
+          <span>📍 Antônio Damião</span>
+          <span>📅 18 de jun. | qui.</span>
+          <span>🕘 21:00</span>
+        </div>
+        <div class="agenda-jogo-times">
+          <div class="agenda-time">
+            <div class="agenda-time-escudo">RT</div>
+            <div class="agenda-time-nome">Real Tocantins F.C</div>
+          </div>
+          <div class="agenda-vs">VS</div>
+          <div class="agenda-time destaque">
+            <div class="agenda-time-escudo"><img src="LOGOSITE.png" alt="Camargo FC"></div>
+            <div class="agenda-time-nome">Camargo FC</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jogo 2 -->
+      <div class="agenda-jogo">
+        <div class="agenda-jogo-meta">
+          <span>📍 Antônio Damião</span>
+          <span>📅 28 de jun. | dom.</span>
+          <span>🕓 16:00</span>
+        </div>
+        <div class="agenda-jogo-times">
+          <div class="agenda-time destaque">
+            <div class="agenda-time-escudo"><img src="LOGOSITE.png" alt="Camargo FC"></div>
+            <div class="agenda-time-nome">Camargo FC</div>
+          </div>
+          <div class="agenda-vs">VS</div>
+          <div class="agenda-time">
+            <div class="agenda-time-escudo">ME</div>
+            <div class="agenda-time-nome">MEC – Milena Esporte Clube</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jogo 3 -->
+      <div class="agenda-jogo">
+        <div class="agenda-jogo-meta">
+          <span>📍 A confirmar</span>
+          <span>📅 A confirmar</span>
+        </div>
+        <div class="agenda-jogo-times">
+          <div class="agenda-time">
+            <div class="agenda-time-escudo">JB</div>
+            <div class="agenda-time-nome">JB Tocantins Esporte Clube</div>
+          </div>
+          <div class="agenda-vs">VS</div>
+          <div class="agenda-time destaque">
+            <div class="agenda-time-escudo"><img src="LOGOSITE.png" alt="Camargo FC"></div>
+            <div class="agenda-time-nome">Camargo FC</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jogo 4 -->
+      <div class="agenda-jogo">
+        <div class="agenda-jogo-meta">
+          <span>📍 A confirmar</span>
+          <span>📅 A confirmar</span>
+        </div>
+        <div class="agenda-jogo-times">
+          <div class="agenda-time destaque">
+            <div class="agenda-time-escudo"><img src="LOGOSITE.png" alt="Camargo FC"></div>
+            <div class="agenda-time-nome">Camargo FC</div>
+          </div>
+          <div class="agenda-vs">VS</div>
+          <div class="agenda-time">
+            <div class="agenda-time-escudo">AP</div>
+            <div class="agenda-time-nome">Atlético Paraisense FC</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jogo 5 -->
+      <div class="agenda-jogo">
+        <div class="agenda-jogo-meta">
+          <span>📍 A confirmar</span>
+          <span>📅 A confirmar</span>
+        </div>
+        <div class="agenda-jogo-times">
+          <div class="agenda-time">
+            <div class="agenda-time-escudo">AN</div>
+            <div class="agenda-time-nome">Ass. Esportiva Nova Geração</div>
+          </div>
+          <div class="agenda-vs">VS</div>
+          <div class="agenda-time destaque">
+            <div class="agenda-time-escudo"><img src="LOGOSITE.png" alt="Camargo FC"></div>
+            <div class="agenda-time-nome">Camargo FC</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Fotos & Memórias</p>
+      <h2 class="section-title">Galeria</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="galeria-tabs">
+      <button class="galeria-tab ativo" onclick="abrirGaleria(this,'gal-atletas')">👤 Atletas</button>
+      <button class="galeria-tab" onclick="abrirGaleria(this,'gal-jogos')">⚽ Jogos</button>
+      <button class="galeria-tab" onclick="abrirGaleria(this,'gal-bastidores')">🎬 Bastidores</button>
+      <button class="galeria-tab" onclick="abrirGaleria(this,'gal-titulos')">🏆 Títulos</button>
+    </div>
+
+    <!-- Atletas -->
+    <div id="gal-atletas" class="galeria-tab-content ativo">
+      <div class="galeria-grid">
+        <div class="galeria-aviso" style="grid-column:1/-1; padding:4rem 1rem;">
+          <span class="galeria-aviso-icon">📸</span>
+          <p class="galeria-aviso-text" style="color:#555; font-size:15px;">Fotos dos atletas em breve</p>
+          <p style="color:#444; font-size:12px; margin-top:0.5rem; letter-spacing:1px;">Adicione as imagens para exibir aqui</p>
+        </div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+      </div>
+    </div>
+
+    <!-- Jogos -->
+    <div id="gal-jogos" class="galeria-tab-content">
+      <div class="galeria-grid">
+        <div class="galeria-aviso" style="grid-column:1/-1; padding:4rem 1rem;">
+          <span class="galeria-aviso-icon">📷</span>
+          <p class="galeria-aviso-text" style="color:#555; font-size:15px;">Fotos dos jogos em breve</p>
+          <p style="color:#444; font-size:12px; margin-top:0.5rem; letter-spacing:1px;">Adicione as imagens para exibir aqui</p>
+        </div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+      </div>
+    </div>
+
+    <!-- Bastidores -->
+    <div id="gal-bastidores" class="galeria-tab-content">
+      <div class="galeria-grid">
+        <div class="galeria-aviso" style="grid-column:1/-1; padding:4rem 1rem;">
+          <span class="galeria-aviso-icon">🎬</span>
+          <p class="galeria-aviso-text" style="color:#555; font-size:15px;">Bastidores em breve</p>
+          <p style="color:#444; font-size:12px; margin-top:0.5rem; letter-spacing:1px;">Adicione as imagens para exibir aqui</p>
+        </div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+      </div>
+    </div>
+
+    <!-- Títulos -->
+    <div id="gal-titulos" class="galeria-tab-content">
+      <div class="galeria-grid">
+        <div class="galeria-aviso" style="grid-column:1/-1; padding:4rem 1rem;">
+          <span class="galeria-aviso-icon">🏆</span>
+          <p class="galeria-aviso-text" style="color:#555; font-size:15px;">Fotos dos títulos em breve</p>
+          <p style="color:#444; font-size:12px; margin-top:0.5rem; letter-spacing:1px;">Adicione as imagens para exibir aqui</p>
+        </div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <img class="footer-escudo" src="LOGOSITE.png" alt="Escudo Camargo FC">
@@ -3237,6 +3580,13 @@
 </footer>
 
 <script>
+  function abrirGaleria(btn, tabId) {
+    document.querySelectorAll('.galeria-tab').forEach(t => t.classList.remove('ativo'));
+    document.querySelectorAll('.galeria-tab-content').forEach(c => c.classList.remove('ativo'));
+    btn.classList.add('ativo');
+    document.getElementById(tabId).classList.add('ativo');
+  }
+
   function filtrar(btn, pos) {
     document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('ativo'));
     btn.classList.add('ativo');
