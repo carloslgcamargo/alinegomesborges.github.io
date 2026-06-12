@@ -383,12 +383,85 @@
 
   /* RESPONSIVE */
   @media (max-width: 768px) {
-    .historia-grid { grid-template-columns: 1fr; }
+    /* NAV */
     .nav-links { display: none; }
-    .hero h1 { font-size: 52px; }
-    .hero-content { flex-direction: column; text-align: center; gap: 2rem; }
-    .hero-escudo { width: 140px; }
-    .hero-stats { justify-content: center; }
+    nav { padding: 0 1rem; }
+
+    /* HERO */
+    .hero { padding: 2rem 1rem; }
+    .hero-content { flex-direction: column; text-align: center; gap: 1.5rem; }
+    .hero-escudo { width: 120px; }
+    .hero h1 { font-size: 42px; }
+    .hero-stats { justify-content: center; flex-wrap: wrap; gap: 1rem; }
+    .hero-stat { min-width: 70px; }
+
+    /* SEÇÕES GERAIS */
+    section { padding: 3rem 1rem; }
+    .container { padding: 0 1rem; }
+    .section-title { font-size: 32px; }
+
+    /* HISTÓRIA */
+    .historia-grid { grid-template-columns: 1fr; }
+
+    /* TÍTULOS */
+    .titulos-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+    .titulo-card { padding: 1rem; }
+    .titulo-icon { font-size: 28px; }
+    .titulo-ano { font-size: 22px; }
+
+    /* COMPETIÇÕES */
+    .comp-grid { grid-template-columns: 1fr; }
+
+    /* MODALIDADES */
+    .modalidades-grid { grid-template-columns: 1fr; gap: 1rem; }
+
+    /* ELENCO */
+    .elenco-filtros { flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+    .filtro-btn { font-size: 11px; padding: 6px 12px; }
+    .elenco-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+    .jogador-card { padding: 1rem 0.75rem; }
+    .jogador-avatar { width: 52px; height: 52px; font-size: 16px; }
+    .jogador-nome { font-size: 16px; }
+    .jogador-posicao-badge { font-size: 9px; padding: 2px 6px; }
+
+    /* AGENDA */
+    .agenda-jogo { padding: 1rem; }
+    .agenda-time-escudo { width: 42px; height: 42px; font-size: 12px; }
+    .agenda-time-nome { font-size: 11px; }
+    .agenda-vs { font-size: 22px; }
+    .agenda-jogo-meta { gap: 0.5rem; font-size: 11px; }
+
+    /* JOGOS - TABS */
+    .jogos-tabs { flex-wrap: wrap; }
+    .jogos-tab { font-size: 11px; padding: 8px 10px; }
+    .tabela-jogos { font-size: 11px; }
+    .tabela-jogos th, .tabela-jogos td { padding: 6px 4px; }
+    .td-tipo, .td-local { display: none; }
+    .jogos-search input { font-size: 13px; padding: 8px 12px; }
+
+    /* GALERIA */
+    .galeria-tabs { flex-wrap: wrap; }
+    .galeria-tab { font-size: 12px; padding: 8px 12px; }
+    .galeria-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+
+    /* TIMELINE */
+    .timeline { padding-left: 1rem; }
+    .timeline li { font-size: 13px; }
+    .timeline-year { font-size: 18px; }
+    .timeline-sub { font-size: 13px; }
+
+    /* FOOTER */
+    footer { padding: 2rem 1rem; }
+    .footer-escudo { width: 60px; }
+  }
+
+  @media (max-width: 400px) {
+    .elenco-grid { grid-template-columns: 1fr; }
+    .titulos-grid { grid-template-columns: 1fr; }
+    .galeria-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 34px; }
+    .agenda-jogo-times { flex-direction: column; align-items: center; gap: 0.5rem; }
+    .agenda-vs { transform: rotate(90deg); }
   }
 
   /* ===== JOGOS ===== */
