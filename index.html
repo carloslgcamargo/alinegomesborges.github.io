@@ -76,7 +76,7 @@
     min-height: 100vh;
     background: var(--preto);
     display: flex; align-items: center; justify-content: center;
-    text-align: center; padding: 4rem 2rem;
+    text-align: left; padding: 4rem 2rem;
     position: relative; overflow: hidden;
   }
 
@@ -87,13 +87,19 @@
     pointer-events: none;
   }
 
-  .hero-content { position: relative; max-width: 700px; }
+  .hero-content {
+    position: relative; max-width: 1000px; width: 100%;
+    display: flex; align-items: center; gap: 4rem;
+  }
 
   .hero-escudo {
-    width: 160px; height: auto;
-    margin: 0 auto 2rem;
+    width: 220px; height: auto; flex-shrink: 0;
     filter: drop-shadow(0 8px 40px rgba(192,25,46,0.5));
   }
+
+  .hero-text { flex: 1; }
+
+  .hero-stats { justify-content: flex-start; }
 
   .hero h1 {
     font-family: 'Bebas Neue', sans-serif;
@@ -380,6 +386,9 @@
     .historia-grid { grid-template-columns: 1fr; }
     .nav-links { display: none; }
     .hero h1 { font-size: 52px; }
+    .hero-content { flex-direction: column; text-align: center; gap: 2rem; }
+    .hero-escudo { width: 140px; }
+    .hero-stats { justify-content: center; }
   }
 
   /* ===== JOGOS ===== */
@@ -530,27 +539,29 @@
 <section class="hero">
   <div class="hero-content">
     <img class="hero-escudo" src="LOGOSITE.png" alt="Escudo Camargo FC">
-    <p class="hero-sub">Fundado em 2015 · Camargo FC</p>
-    <h1>Camargo <span>Futebol Clube</span></h1>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="hero-stat-num">11</div>
-        <div class="hero-stat-label">Anos de história</div>
+    <div class="hero-text">
+      <p class="hero-sub">Fundado em 2015 · Camargo FC</p>
+      <h1>Camargo <span>Futebol Clube</span></h1>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">11</div>
+          <div class="hero-stat-label">Anos de história</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">7</div>
+          <div class="hero-stat-label">Títulos</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">23</div>
+          <div class="hero-stat-label">Atletas no elenco</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">4</div>
+          <div class="hero-stat-label">Modalidades</div>
+        </div>
       </div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">7</div>
-        <div class="hero-stat-label">Títulos</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">23</div>
-        <div class="hero-stat-label">Atletas no elenco</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">4</div>
-        <div class="hero-stat-label">Modalidades</div>
-      </div>
+      <a href="#historia" class="hero-btn">Conheça o clube</a>
     </div>
-    <a href="#historia" class="hero-btn">Conheça o clube</a>
   </div>
 </section>
 
