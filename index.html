@@ -868,7 +868,7 @@
       <h2 class="section-title">Agenda de Jogos</h2>
       <div class="section-divider"></div>
     </div>
-   
+   <!-- AMISTOSO -->
    <p class="section-eyebrow">AMISTOSO</p>
      <div class="agenda-grupo">
       <div class="agenda-jogo">
@@ -1124,12 +1124,25 @@
     </div>
 
     <div class="galeria-tabs">
+      <button class="galeria-tab" onclick="abrirGaleria(this,'gal-titulos')">🏆 Títulos</button>
       <button class="galeria-tab ativo" onclick="abrirGaleria(this,'gal-atletas')">👤 Atletas</button>
       <button class="galeria-tab" onclick="abrirGaleria(this,'gal-jogos')">⚽ Jogos</button>
       <button class="galeria-tab" onclick="abrirGaleria(this,'gal-bastidores')">🎬 Bastidores</button>
-      <button class="galeria-tab" onclick="abrirGaleria(this,'gal-titulos')">🏆 Títulos</button>
     </div>
 
+    <!-- Títulos -->
+    <div id="gal-titulos" class="galeria-tab-content">
+      <div class="galeria-grid">
+        <div class="galeria-aviso" style="grid-column:1/-1; padding:4rem 1rem;">
+          <span class="galeria-aviso-icon">🏆</span>
+          <p class="galeria-aviso-text" style="color:#555; font-size:15px;">Fotos dos títulos em breve</p>
+          <p style="color:#444; font-size:12px; margin-top:0.5rem; letter-spacing:1px;">Adicione as imagens para exibir aqui</p>
+        </div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+      </div>
+    </div>
     <!-- Atletas -->
     <div id="gal-atletas" class="galeria-tab-content ativo">
       <div class="galeria-grid">
@@ -1138,7 +1151,7 @@
           <p class="galeria-aviso-text" style="color:#555; font-size:15px;">Fotos dos atletas em breve</p>
           <p style="color:#444; font-size:12px; margin-top:0.5rem; letter-spacing:1px;">Adicione as imagens para exibir aqui</p>
         </div>
-        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+        <div class="galeria-add-card"><span>＋</span><span><img src="Diretoria.jpeg"></span></div>
         <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
         <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
       </div>
@@ -1164,20 +1177,6 @@
         <div class="galeria-aviso" style="grid-column:1/-1; padding:4rem 1rem;">
           <span class="galeria-aviso-icon">🎬</span>
           <p class="galeria-aviso-text" style="color:#555; font-size:15px;">Bastidores em breve</p>
-          <p style="color:#444; font-size:12px; margin-top:0.5rem; letter-spacing:1px;">Adicione as imagens para exibir aqui</p>
-        </div>
-        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
-        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
-        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
-      </div>
-    </div>
-
-    <!-- Títulos -->
-    <div id="gal-titulos" class="galeria-tab-content">
-      <div class="galeria-grid">
-        <div class="galeria-aviso" style="grid-column:1/-1; padding:4rem 1rem;">
-          <span class="galeria-aviso-icon">🏆</span>
-          <p class="galeria-aviso-text" style="color:#555; font-size:15px;">Fotos dos títulos em breve</p>
           <p style="color:#444; font-size:12px; margin-top:0.5rem; letter-spacing:1px;">Adicione as imagens para exibir aqui</p>
         </div>
         <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
