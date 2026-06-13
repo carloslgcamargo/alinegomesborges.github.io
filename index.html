@@ -70,6 +70,29 @@
   }
   .nav-links a:hover { color: var(--vermelho); border-bottom-color: var(--vermelho); }
 
+  .nav-proximo-jogo {
+    display: flex; flex-direction: column; align-items: flex-end;
+    text-decoration: none; padding: 4px 14px 4px 12px;
+    border-left: 2px solid rgba(192,25,46,0.3);
+    transition: border-color 0.2s;
+    margin-left: 0.5rem;
+  }
+  .nav-proximo-jogo:hover { border-color: var(--vermelho); }
+  .nav-pj-label {
+    font-size: 9px; font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--vermelho); line-height: 1;
+    margin-bottom: 3px;
+  }
+  .nav-pj-info {
+    font-size: 11px; color: rgba(255,255,255,0.75); white-space: nowrap;
+    line-height: 1;
+  }
+  .nav-pj-info em { font-style: normal; color: rgba(255,255,255,0.4); margin: 0 2px; }
+
+  @media (max-width: 768px) {
+    .nav-proximo-jogo { display: none; }
+  }
+
   /* HERO */
   .hero {
     margin-top: 60px;
@@ -756,15 +779,19 @@
     <div class="nav-nome">Camargo FC <span>Futebol Clube</span></div>
   </a>
   <div class="nav-links">
-    <a href="#historia">História</a>
-    <a href="#titulos">Títulos</a>
     <a href="#competicoes">Competições</a>
-    <a href="#modalidades">Modalidades</a>
-    <a href="#elenco">Elenco</a>
     <a href="#agenda">Agenda</a>
-    <a href="#jogos">Jogos</a>
+    <a href="#elenco">Elenco</a>
+    <a href="#titulos">Títulos</a>
+    <a href="#modalidades">Modalidades</a>
     <a href="#galeria">Galeria</a>
+    <a href="#historia">História</a>
+    <a href="#jogos">Jogos</a>
   </div>
+  <a href="#agenda" class="nav-proximo-jogo">
+    <span class="nav-pj-label">Próximo Jogo</span>
+    <span class="nav-pj-info">⚽ Real Tocantins <em>vs</em> Camargo FC · 18/jun · 21h</span>
+  </a>
 </nav>
 
 <!-- HERO -->
@@ -793,6 +820,344 @@
         </div>
       </div>
       <a href="#historia" class="hero-btn">Conheça o clube</a>
+    </div>
+  </div>
+</section>
+
+<!-- COMPETIÇÕES -->
+<section id="competicoes">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Calendário</p>
+      <h2 class="section-title">Competições</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="comp-grid">
+      <div class="comp-card">
+        <span class="comp-badge ativo">Em andamento</span>
+        <div class="comp-nome">Liga Municipal 2ª Divisão - 2026</div>
+        <p class="comp-desc">Principal competição de futebol amador do município. O Camargo FC disputa a segunda divisão, buscando o Bicampeonato.</p>
+        <div class="comp-info"><span>📅 Jun–Out 2026</span><span>⚽ Paraíso do TO </span></div>
+      </div>
+      <div class="comp-card">
+        <span class="comp-badge ativo">Em andamento</span>
+        <div class="comp-nome">Liga Municipal de Futsal 2026</div>
+        <p class="comp-desc">Torneio Municipal que reúne equipes de futsal amador da cidade. A equipe de futsal será formada por uma equipe SUB 17</p>
+        <div class="comp-info"><span>📅 A confirmar </span><span>🏟️ Paraíso do TO </span></div>
+      </div>
+      <div class="comp-card">
+        <span class="comp-badge">Futuro</span>
+        <div class="comp-nome">Equipe Feminina </div>
+        <p class="comp-desc">A equipe feminina do Camargo FC foi encerrada. Há planos para retorno as atividades em 2027 </p>
+        <div class="comp-info"><span>📅 A confirmar </span><span>⚽ Paraíso do TO </span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENDA -->
+<section id="agenda">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">14ª Liga Paraíso de Futebol 2026 · 2ª Divisão</p>
+      <h2 class="section-title">Agenda de Jogos</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <!-- Jogo 1 -->
+    <div class="agenda-grupo">
+      <div class="agenda-jogo">
+        <span class="agenda-badge-proximo">Próximo jogo</span>
+        <div class="agenda-jogo-meta">
+          <span>📍 Antônio Damião</span>
+          <span>📅 18 de jun. | qui.</span>
+          <span>🕘 21:00</span>
+        </div>
+        <div class="agenda-jogo-times">
+          <div class="agenda-time">
+            <div class="agenda-time-escudo"><img src="Real_tocantins.png" alt="Camargo FC"></div>
+            <div class="agenda-time-nome">Real Tocantins F.C</div>
+          </div>
+          <div class="agenda-vs">VS</div>
+          <div class="agenda-time destaque">
+            <div class="agenda-time-escudo"><img src="LOGOSITE.png" alt="Camargo FC"></div>
+            <div class="agenda-time-nome">Camargo FC</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jogo 2 -->
+      <div class="agenda-jogo">
+        <div class="agenda-jogo-meta">
+          <span>📍 Antônio Damião</span>
+          <span>📅 28 de jun. | dom.</span>
+          <span>🕓 16:00</span>
+        </div>
+        <div class="agenda-jogo-times">
+          <div class="agenda-time destaque">
+            <div class="agenda-time-escudo"><img src="LOGOSITE.png" alt="Camargo FC"></div>
+            <div class="agenda-time-nome">Camargo FC</div>
+          </div>
+          <div class="agenda-vs">VS</div>
+          <div class="agenda-time">
+            <div class="agenda-time-escudo"><img src="Milena.png" alt="Camargo FC"></div>
+            <div class="agenda-time-nome">MEC – Milena Esporte Clube</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jogo 3 -->
+      <div class="agenda-jogo">
+        <div class="agenda-jogo-meta">
+          <span>📍 A confirmar</span>
+          <span>📅 A confirmar</span>
+        </div>
+        <div class="agenda-jogo-times">
+          <div class="agenda-time">
+            <div class="agenda-time-escudo"><img src="JBtocantins.jpeg" alt="Camargo FC"></div>
+            <div class="agenda-time-nome">JB Tocantins Esporte Clube</div>
+          </div>
+          <div class="agenda-vs">VS</div>
+          <div class="agenda-time destaque">
+            <div class="agenda-time-escudo"><img src="LOGOSITE.png" alt="Camargo FC"></div>
+            <div class="agenda-time-nome">Camargo FC</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jogo 4 -->
+      <div class="agenda-jogo">
+        <div class="agenda-jogo-meta">
+          <span>📍 A confirmar</span>
+          <span>📅 A confirmar</span>
+        </div>
+        <div class="agenda-jogo-times">
+          <div class="agenda-time destaque">
+            <div class="agenda-time-escudo"><img src="LOGOSITE.png" alt="Camargo FC"></div>
+            <div class="agenda-time-nome">Camargo FC</div>
+          </div>
+          <div class="agenda-vs">VS</div>
+          <div class="agenda-time">
+            <div class="agenda-time-escudo"><img src="Atl_paraisense.jpeg" alt="Camargo FC"></div>
+            <div class="agenda-time-nome">Atlético Paraisense FC</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jogo 5 -->
+      <div class="agenda-jogo">
+        <div class="agenda-jogo-meta">
+          <span>📍 A confirmar</span>
+          <span>📅 A confirmar</span>
+        </div>
+        <div class="agenda-jogo-times">
+          <div class="agenda-time">0
+            <div class="agenda-time-escudo"><img src="NG.png" alt="Camargo FC"></div>
+            <div class="agenda-time-nome">Ass. Esportiva Nova Geração</div>
+          </div>
+          <div class="agenda-vs">VS</div>
+          <div class="agenda-time destaque">
+            <div class="agenda-time-escudo"><img src="LOGOSITE.png" alt="Camargo FC"></div>
+            <div class="agenda-time-nome">Camargo FC</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ELENCO -->
+<section id="elenco">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Temporada 2026</p>
+      <h2 class="section-title">Elenco Atual</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="elenco-filtros">
+      <button class="filtro-btn ativo" onclick="filtrar(this, 'todos')">Todos</button>
+      <button class="filtro-btn" onclick="filtrar(this, 'goleiro')">Goleiros</button>
+      <button class="filtro-btn" onclick="filtrar(this, 'defensor')">Defensores</button>
+      <button class="filtro-btn" onclick="filtrar(this, 'meio')">Meio-campo</button>
+      <button class="filtro-btn" onclick="filtrar(this, 'atacante')">Atacantes</button>
+    </div>
+
+    <div class="elenco-grid" id="elencoGrid">
+      <!-- GOLEIROS -->
+      <div class="jogador-card" data-pos="goleiro"><div class="jogador-avatar">IA</div><div class="jogador-nome">Iago</div><div class="jogador-posicao">Goleiro</div><div class="jogador-numero">20 anos</div><span class="jogador-posicao-badge">GL</span></div>
+      <div class="jogador-card" data-pos="goleiro"><div class="jogador-avatar">LC</div><div class="jogador-nome">Lucas Cauã</div><div class="jogador-posicao">Goleiro</div><div class="jogador-numero">17 anos</div><span class="jogador-posicao-badge">GL</span></div>
+      <!-- ZAGUEIROS -->
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar">GG</div><div class="jogador-nome">Gustavo Gomes</div><div class="jogador-posicao">Zagueiro</div><div class="jogador-numero">15 anos</div><span class="jogador-posicao-badge">ZAG</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar">DA</div><div class="jogador-nome">Daniel</div><div class="jogador-posicao">Zagueiro</div><div class="jogador-numero">24 anos</div><span class="jogador-posicao-badge">ZAG</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar">DP</div><div class="jogador-nome">David Peixão</div><div class="jogador-posicao">Zagueiro</div><div class="jogador-numero">27 anos</div><span class="jogador-posicao-badge">ZAG</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar">MD</div><div class="jogador-nome">Michael Davi</div><div class="jogador-posicao">Zagueiro / Lateral</div><div class="jogador-numero">17 anos</div><span class="jogador-posicao-badge">ZAG/LAT</span></div>
+      <!-- LATERAIS -->
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar">FA</div><div class="jogador-nome">Fabiano</div><div class="jogador-posicao">Lateral Direito</div><div class="jogador-numero">30 anos</div><span class="jogador-posicao-badge">LD</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar">AT</div><div class="jogador-nome">Athos</div><div class="jogador-posicao">Lateral Direito</div><div class="jogador-numero">16 anos</div><span class="jogador-posicao-badge">LD</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar">EN</div><div class="jogador-nome">Eduardo N.</div><div class="jogador-posicao">Lateral Esquerdo</div><div class="jogador-numero">22 anos</div><span class="jogador-posicao-badge">LE</span></div>
+      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar">GU</div><div class="jogador-nome">Guilherme</div><div class="jogador-posicao">Lateral Esquerdo</div><div class="jogador-numero">22 anos</div><span class="jogador-posicao-badge">LE</span></div>
+      <!-- VOLANTES -->
+      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar">DL</div><div class="jogador-nome">Davi Lucas</div><div class="jogador-posicao">Volante</div><div class="jogador-numero">16 anos</div><span class="jogador-posicao-badge">VOL</span></div>
+      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar">DN</div><div class="jogador-nome">David Novaes</div><div class="jogador-posicao">Volante</div><div class="jogador-numero">26 anos</div><span class="jogador-posicao-badge">VOL</span></div>
+      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar">JM</div><div class="jogador-nome">João Marcelo</div><div class="jogador-posicao">Volante</div><div class="jogador-numero">21 anos</div><span class="jogador-posicao-badge">VOL</span></div>
+      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar">CH</div><div class="jogador-nome">Chico</div><div class="jogador-posicao">Volante / Meia</div><div class="jogador-numero">26 anos</div><span class="jogador-posicao-badge">VOL/MEI</span></div>
+      <!-- MEIAS -->
+      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar">CH</div><div class="jogador-nome">Carlos Henrique</div><div class="jogador-posicao">Meia</div><div class="jogador-numero">16 anos</div><span class="jogador-posicao-badge">MEI</span></div>
+      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar">CA</div><div class="jogador-nome">Caio</div><div class="jogador-posicao">Meia</div><div class="jogador-numero">20 anos</div><span class="jogador-posicao-badge">MEI</span></div>
+      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar">AR</div><div class="jogador-nome">Ariostocly</div><div class="jogador-posicao">Meia Atacante</div><div class="jogador-numero">22 anos</div><span class="jogador-posicao-badge">MEI/ATA</span></div>
+      <!-- PONTAS / ATACANTES -->
+      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar">JM</div><div class="jogador-nome">João Marçal</div><div class="jogador-posicao">Ponta</div><div class="jogador-numero">16 anos</div><span class="jogador-posicao-badge">PTA</span></div>
+      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar">CL</div><div class="jogador-nome">Clovis Henrique</div><div class="jogador-posicao">Ponta</div><div class="jogador-numero">19 anos</div><span class="jogador-posicao-badge">PTA</span></div>
+      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar">GT</div><div class="jogador-nome">Gabriel Tolentino</div><div class="jogador-posicao">Ponta / Atacante</div><div class="jogador-numero">—</div><span class="jogador-posicao-badge">PTA/ATA</span></div>
+      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar">MH</div><div class="jogador-nome">Marcos Henrique</div><div class="jogador-posicao">Ponta / Atacante</div><div class="jogador-numero">—</div><span class="jogador-posicao-badge">PTA/ATA</span></div>
+      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar">AB</div><div class="jogador-nome">Arthur Sousa Bileu</div><div class="jogador-posicao">Atacante</div><div class="jogador-numero">16 anos</div><span class="jogador-posicao-badge">ATA</span></div>
+      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar">AN</div><div class="jogador-nome">André</div><div class="jogador-posicao">Atacante</div><div class="jogador-numero">25 anos</div><span class="jogador-posicao-badge">ATA</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TÍTULOS -->
+<section id="titulos">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Conquistas</p>
+      <h2 class="section-title">Galeria de Títulos</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="titulos-grid">
+      <div class="titulo-card">
+        <span class="titulo-icon">🏆</span>
+        <div class="titulo-nome">Liga Municipal 2ª Divisão </div>
+        <div class="titulo-qtd">1</div>
+        <div class="titulo-anos">2022</div>
+      </div>
+      <div class="titulo-card">
+        <span class="titulo-icon">🏆</span>
+        <div class="titulo-nome">Taça Nova Geração</div>
+        <div class="titulo-qtd">1</div>
+        <div class="titulo-anos">2023</div>
+      </div>
+      <div class="titulo-card">
+        <span class="titulo-icon">🥇</span>
+        <div class="titulo-nome">Torneio de Inverno</div>
+        <div class="titulo-qtd">1</div>
+        <div class="titulo-anos">2020</div>
+      </div>
+      <div class="titulo-card">
+        <span class="titulo-icon">🌟</span>
+        <div class="titulo-nome">Quadrangulares</div>
+        <div class="titulo-qtd">4</div>
+        <div class="titulo-anos">2017-2019-2020-2021</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODALIDADES -->
+<section id="modalidades">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Esportes</p>
+      <h2 class="section-title">Modalidades</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="modal-grid">
+      <div class="modal-card">
+        <span class="modal-icon">⚽</span>
+        <div class="modal-nome">Futebol de Campo</div>
+        <p class="modal-desc">A modalidade principal do clube. Equipe masculina disputa torneios municipais e estaduais com 22 atletas inscritos.</p>
+      </div>
+      <div class="modal-card">
+        <span class="modal-icon">🏃</span>
+        <div class="modal-nome">Futsal</div>
+        <p class="modal-desc">Criado em 21, o futsal evoluiu rapidamente. Equipe disputando a Liga Municipal com grupo de 14 jogadores.</p>
+      </div>
+      <div class="modal-card">
+        <span class="modal-icon">👩</span>
+        <div class="modal-nome">Futebol Feminino</div>
+        <p class="modal-desc">Lançado em 2021, o time feminino representa a inclusão e o crescimento do clube. Primeira temporada oficial em 2021.</p>
+      </div>
+      <div class="modal-card">
+        <span class="modal-icon">🧒</span>
+        <div class="modal-nome">Categorias de Base</div>
+        <p class="modal-desc">Projeto social que revela jovens talentos inciado em 2023. Atende crianças e adolescentes de 4 a 15 anos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-eyebrow">Fotos & Memórias</p>
+      <h2 class="section-title">Galeria</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="galeria-tabs">
+      <button class="galeria-tab ativo" onclick="abrirGaleria(this,'gal-atletas')">👤 Atletas</button>
+      <button class="galeria-tab" onclick="abrirGaleria(this,'gal-jogos')">⚽ Jogos</button>
+      <button class="galeria-tab" onclick="abrirGaleria(this,'gal-bastidores')">🎬 Bastidores</button>
+      <button class="galeria-tab" onclick="abrirGaleria(this,'gal-titulos')">🏆 Títulos</button>
+    </div>
+
+    <!-- Atletas -->
+    <div id="gal-atletas" class="galeria-tab-content ativo">
+      <div class="galeria-grid">
+        <div class="galeria-aviso" style="grid-column:1/-1; padding:4rem 1rem;">
+          <span class="galeria-aviso-icon">📸</span>
+          <p class="galeria-aviso-text" style="color:#555; font-size:15px;">Fotos dos atletas em breve</p>
+          <p style="color:#444; font-size:12px; margin-top:0.5rem; letter-spacing:1px;">Adicione as imagens para exibir aqui</p>
+        </div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+      </div>
+    </div>
+
+    <!-- Jogos -->
+    <div id="gal-jogos" class="galeria-tab-content">
+      <div class="galeria-grid">
+        <div class="galeria-aviso" style="grid-column:1/-1; padding:4rem 1rem;">
+          <span class="galeria-aviso-icon">📷</span>
+          <p class="galeria-aviso-text" style="color:#555; font-size:15px;">Fotos dos jogos em breve</p>
+          <p style="color:#444; font-size:12px; margin-top:0.5rem; letter-spacing:1px;">Adicione as imagens para exibir aqui</p>
+        </div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+      </div>
+    </div>
+
+    <!-- Bastidores -->
+    <div id="gal-bastidores" class="galeria-tab-content">
+      <div class="galeria-grid">
+        <div class="galeria-aviso" style="grid-column:1/-1; padding:4rem 1rem;">
+          <span class="galeria-aviso-icon">🎬</span>
+          <p class="galeria-aviso-text" style="color:#555; font-size:15px;">Bastidores em breve</p>
+          <p style="color:#444; font-size:12px; margin-top:0.5rem; letter-spacing:1px;">Adicione as imagens para exibir aqui</p>
+        </div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+      </div>
+    </div>
+
+    <!-- Títulos -->
+    <div id="gal-titulos" class="galeria-tab-content">
+      <div class="galeria-grid">
+        <div class="galeria-aviso" style="grid-column:1/-1; padding:4rem 1rem;">
+          <span class="galeria-aviso-icon">🏆</span>
+          <p class="galeria-aviso-text" style="color:#555; font-size:15px;">Fotos dos títulos em breve</p>
+          <p style="color:#444; font-size:12px; margin-top:0.5rem; letter-spacing:1px;">Adicione as imagens para exibir aqui</p>
+        </div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -941,270 +1306,6 @@
             Camargo FC chega as semifinais da Liga Paraíso de Futebol - 2ª Divisão, eliminado nos pênaltis.
           </li>
         </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TÍTULOS -->
-<section id="titulos">
-  <div class="container">
-    <div class="section-header">
-      <p class="section-eyebrow">Conquistas</p>
-      <h2 class="section-title">Galeria de Títulos</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="titulos-grid">
-      <div class="titulo-card">
-        <span class="titulo-icon">🏆</span>
-        <div class="titulo-nome">Liga Municipal 2ª Divisão </div>
-        <div class="titulo-qtd">1</div>
-        <div class="titulo-anos">2022</div>
-      </div>
-      <div class="titulo-card">
-        <span class="titulo-icon">🏆</span>
-        <div class="titulo-nome">Taça Nova Geração</div>
-        <div class="titulo-qtd">1</div>
-        <div class="titulo-anos">2023</div>
-      </div>
-      <div class="titulo-card">
-        <span class="titulo-icon">🥇</span>
-        <div class="titulo-nome">Torneio de Inverno</div>
-        <div class="titulo-qtd">1</div>
-        <div class="titulo-anos">2020</div>
-      </div>
-      <div class="titulo-card">
-        <span class="titulo-icon">🌟</span>
-        <div class="titulo-nome">Quadrangulares</div>
-        <div class="titulo-qtd">4</div>
-        <div class="titulo-anos">2017-2019-2020-2021</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COMPETIÇÕES -->
-<section id="competicoes">
-  <div class="container">
-    <div class="section-header">
-      <p class="section-eyebrow">Calendário</p>
-      <h2 class="section-title">Competições</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="comp-grid">
-      <div class="comp-card">
-        <span class="comp-badge ativo">Em andamento</span>
-        <div class="comp-nome">Liga Municipal 2ª Divisão - 2026</div>
-        <p class="comp-desc">Principal competição de futebol amador do município. O Camargo FC disputa a segunda divisão, buscando o Bicampeonato.</p>
-        <div class="comp-info"><span>📅 Jun–Out 2026</span><span>⚽ Paraíso do TO </span></div>
-      </div>
-      <div class="comp-card">
-        <span class="comp-badge ativo">Em andamento</span>
-        <div class="comp-nome">Liga Municipal de Futsal 2026</div>
-        <p class="comp-desc">Torneio Municipal que reúne equipes de futsal amador da cidade. A equipe de futsal será formada por uma equipe SUB 17</p>
-        <div class="comp-info"><span>📅 A confirmar </span><span>🏟️ Paraíso do TO </span></div>
-      </div>
-      <div class="comp-card">
-        <span class="comp-badge">Futuro</span>
-        <div class="comp-nome">Equipe Feminina </div>
-        <p class="comp-desc">A equipe feminina do Camargo FC foi encerrada. Há planos para retorno as atividades em 2027 </p>
-        <div class="comp-info"><span>📅 A confirmar </span><span>⚽ Paraíso do TO </span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MODALIDADES -->
-<section id="modalidades">
-  <div class="container">
-    <div class="section-header">
-      <p class="section-eyebrow">Esportes</p>
-      <h2 class="section-title">Modalidades</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="modal-grid">
-      <div class="modal-card">
-        <span class="modal-icon">⚽</span>
-        <div class="modal-nome">Futebol de Campo</div>
-        <p class="modal-desc">A modalidade principal do clube. Equipe masculina disputa torneios municipais e estaduais com 22 atletas inscritos.</p>
-      </div>
-      <div class="modal-card">
-        <span class="modal-icon">🏃</span>
-        <div class="modal-nome">Futsal</div>
-        <p class="modal-desc">Criado em 21, o futsal evoluiu rapidamente. Equipe disputando a Liga Municipal com grupo de 14 jogadores.</p>
-      </div>
-      <div class="modal-card">
-        <span class="modal-icon">👩</span>
-        <div class="modal-nome">Futebol Feminino</div>
-        <p class="modal-desc">Lançado em 2021, o time feminino representa a inclusão e o crescimento do clube. Primeira temporada oficial em 2021.</p>
-      </div>
-      <div class="modal-card">
-        <span class="modal-icon">🧒</span>
-        <div class="modal-nome">Categorias de Base</div>
-        <p class="modal-desc">Projeto social que revela jovens talentos inciado em 2023. Atende crianças e adolescentes de 4 a 15 anos.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ELENCO -->
-<section id="elenco">
-  <div class="container">
-    <div class="section-header">
-      <p class="section-eyebrow">Temporada 2026</p>
-      <h2 class="section-title">Elenco Atual</h2>
-      <div class="section-divider"></div>
-    </div>
-
-    <div class="elenco-filtros">
-      <button class="filtro-btn ativo" onclick="filtrar(this, 'todos')">Todos</button>
-      <button class="filtro-btn" onclick="filtrar(this, 'goleiro')">Goleiros</button>
-      <button class="filtro-btn" onclick="filtrar(this, 'defensor')">Defensores</button>
-      <button class="filtro-btn" onclick="filtrar(this, 'meio')">Meio-campo</button>
-      <button class="filtro-btn" onclick="filtrar(this, 'atacante')">Atacantes</button>
-    </div>
-
-    <div class="elenco-grid" id="elencoGrid">
-      <!-- GOLEIROS -->
-      <div class="jogador-card" data-pos="goleiro"><div class="jogador-avatar">IA</div><div class="jogador-nome">Iago</div><div class="jogador-posicao">Goleiro</div><div class="jogador-numero">20 anos</div><span class="jogador-posicao-badge">GL</span></div>
-      <div class="jogador-card" data-pos="goleiro"><div class="jogador-avatar">LC</div><div class="jogador-nome">Lucas Cauã</div><div class="jogador-posicao">Goleiro</div><div class="jogador-numero">17 anos</div><span class="jogador-posicao-badge">GL</span></div>
-      <!-- ZAGUEIROS -->
-      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar">GG</div><div class="jogador-nome">Gustavo Gomes</div><div class="jogador-posicao">Zagueiro</div><div class="jogador-numero">15 anos</div><span class="jogador-posicao-badge">ZAG</span></div>
-      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar">DA</div><div class="jogador-nome">Daniel</div><div class="jogador-posicao">Zagueiro</div><div class="jogador-numero">24 anos</div><span class="jogador-posicao-badge">ZAG</span></div>
-      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar">DP</div><div class="jogador-nome">David Peixão</div><div class="jogador-posicao">Zagueiro</div><div class="jogador-numero">27 anos</div><span class="jogador-posicao-badge">ZAG</span></div>
-      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar">MD</div><div class="jogador-nome">Michael Davi</div><div class="jogador-posicao">Zagueiro / Lateral</div><div class="jogador-numero">17 anos</div><span class="jogador-posicao-badge">ZAG/LAT</span></div>
-      <!-- LATERAIS -->
-      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar">FA</div><div class="jogador-nome">Fabiano</div><div class="jogador-posicao">Lateral Direito</div><div class="jogador-numero">30 anos</div><span class="jogador-posicao-badge">LD</span></div>
-      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar">AT</div><div class="jogador-nome">Athos</div><div class="jogador-posicao">Lateral Direito</div><div class="jogador-numero">16 anos</div><span class="jogador-posicao-badge">LD</span></div>
-      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar">EN</div><div class="jogador-nome">Eduardo N.</div><div class="jogador-posicao">Lateral Esquerdo</div><div class="jogador-numero">22 anos</div><span class="jogador-posicao-badge">LE</span></div>
-      <div class="jogador-card" data-pos="defensor"><div class="jogador-avatar">GU</div><div class="jogador-nome">Guilherme</div><div class="jogador-posicao">Lateral Esquerdo</div><div class="jogador-numero">22 anos</div><span class="jogador-posicao-badge">LE</span></div>
-      <!-- VOLANTES -->
-      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar">DL</div><div class="jogador-nome">Davi Lucas</div><div class="jogador-posicao">Volante</div><div class="jogador-numero">16 anos</div><span class="jogador-posicao-badge">VOL</span></div>
-      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar">DN</div><div class="jogador-nome">David Novaes</div><div class="jogador-posicao">Volante</div><div class="jogador-numero">26 anos</div><span class="jogador-posicao-badge">VOL</span></div>
-      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar">JM</div><div class="jogador-nome">João Marcelo</div><div class="jogador-posicao">Volante</div><div class="jogador-numero">21 anos</div><span class="jogador-posicao-badge">VOL</span></div>
-      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar">CH</div><div class="jogador-nome">Chico</div><div class="jogador-posicao">Volante / Meia</div><div class="jogador-numero">26 anos</div><span class="jogador-posicao-badge">VOL/MEI</span></div>
-      <!-- MEIAS -->
-      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar">CH</div><div class="jogador-nome">Carlos Henrique</div><div class="jogador-posicao">Meia</div><div class="jogador-numero">16 anos</div><span class="jogador-posicao-badge">MEI</span></div>
-      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar">CA</div><div class="jogador-nome">Caio</div><div class="jogador-posicao">Meia</div><div class="jogador-numero">20 anos</div><span class="jogador-posicao-badge">MEI</span></div>
-      <div class="jogador-card" data-pos="meio"><div class="jogador-avatar">AR</div><div class="jogador-nome">Ariostocly</div><div class="jogador-posicao">Meia Atacante</div><div class="jogador-numero">22 anos</div><span class="jogador-posicao-badge">MEI/ATA</span></div>
-      <!-- PONTAS / ATACANTES -->
-      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar">JM</div><div class="jogador-nome">João Marçal</div><div class="jogador-posicao">Ponta</div><div class="jogador-numero">16 anos</div><span class="jogador-posicao-badge">PTA</span></div>
-      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar">CL</div><div class="jogador-nome">Clovis Henrique</div><div class="jogador-posicao">Ponta</div><div class="jogador-numero">19 anos</div><span class="jogador-posicao-badge">PTA</span></div>
-      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar">GT</div><div class="jogador-nome">Gabriel Tolentino</div><div class="jogador-posicao">Ponta / Atacante</div><div class="jogador-numero">—</div><span class="jogador-posicao-badge">PTA/ATA</span></div>
-      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar">MH</div><div class="jogador-nome">Marcos Henrique</div><div class="jogador-posicao">Ponta / Atacante</div><div class="jogador-numero">—</div><span class="jogador-posicao-badge">PTA/ATA</span></div>
-      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar">AB</div><div class="jogador-nome">Arthur Sousa Bileu</div><div class="jogador-posicao">Atacante</div><div class="jogador-numero">16 anos</div><span class="jogador-posicao-badge">ATA</span></div>
-      <div class="jogador-card" data-pos="atacante"><div class="jogador-avatar">AN</div><div class="jogador-nome">André</div><div class="jogador-posicao">Atacante</div><div class="jogador-numero">25 anos</div><span class="jogador-posicao-badge">ATA</span></div>
-    </div>
-  </div>
-</section>
-
-
-<!-- AGENDA -->
-<section id="agenda">
-  <div class="container">
-    <div class="section-header">
-      <p class="section-eyebrow">14ª Liga Paraíso de Futebol 2026 · 2ª Divisão</p>
-      <h2 class="section-title">Agenda de Jogos</h2>
-      <div class="section-divider"></div>
-    </div>
-
-    <!-- Jogo 1 -->
-    <div class="agenda-grupo">
-      <div class="agenda-jogo">
-        <span class="agenda-badge-proximo">Próximo jogo</span>
-        <div class="agenda-jogo-meta">
-          <span>📍 Antônio Damião</span>
-          <span>📅 18 de jun. | qui.</span>
-          <span>🕘 21:00</span>
-        </div>
-        <div class="agenda-jogo-times">
-          <div class="agenda-time">
-            <div class="agenda-time-escudo"><img src="Real_tocantins.png" alt="Camargo FC"></div>
-            <div class="agenda-time-nome">Real Tocantins F.C</div>
-          </div>
-          <div class="agenda-vs">VS</div>
-          <div class="agenda-time destaque">
-            <div class="agenda-time-escudo"><img src="LOGOSITE.png" alt="Camargo FC"></div>
-            <div class="agenda-time-nome">Camargo FC</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Jogo 2 -->
-      <div class="agenda-jogo">
-        <div class="agenda-jogo-meta">
-          <span>📍 Antônio Damião</span>
-          <span>📅 28 de jun. | dom.</span>
-          <span>🕓 16:00</span>
-        </div>
-        <div class="agenda-jogo-times">
-          <div class="agenda-time destaque">
-            <div class="agenda-time-escudo"><img src="LOGOSITE.png" alt="Camargo FC"></div>
-            <div class="agenda-time-nome">Camargo FC</div>
-          </div>
-          <div class="agenda-vs">VS</div>
-          <div class="agenda-time">
-            <div class="agenda-time-escudo"><img src="Milena.png" alt="Camargo FC"></div>
-            <div class="agenda-time-nome">MEC – Milena Esporte Clube</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Jogo 3 -->
-      <div class="agenda-jogo">
-        <div class="agenda-jogo-meta">
-          <span>📍 A confirmar</span>
-          <span>📅 A confirmar</span>
-        </div>
-        <div class="agenda-jogo-times">
-          <div class="agenda-time">
-            <div class="agenda-time-escudo"><img src="JBtocantins.jpeg" alt="Camargo FC"></div>
-            <div class="agenda-time-nome">JB Tocantins Esporte Clube</div>
-          </div>
-          <div class="agenda-vs">VS</div>
-          <div class="agenda-time destaque">
-            <div class="agenda-time-escudo"><img src="LOGOSITE.png" alt="Camargo FC"></div>
-            <div class="agenda-time-nome">Camargo FC</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Jogo 4 -->
-      <div class="agenda-jogo">
-        <div class="agenda-jogo-meta">
-          <span>📍 A confirmar</span>
-          <span>📅 A confirmar</span>
-        </div>
-        <div class="agenda-jogo-times">
-          <div class="agenda-time destaque">
-            <div class="agenda-time-escudo"><img src="LOGOSITE.png" alt="Camargo FC"></div>
-            <div class="agenda-time-nome">Camargo FC</div>
-          </div>
-          <div class="agenda-vs">VS</div>
-          <div class="agenda-time">
-            <div class="agenda-time-escudo"><img src="Atl_paraisense.jpeg" alt="Camargo FC"></div>
-            <div class="agenda-time-nome">Atlético Paraisense FC</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Jogo 5 -->
-      <div class="agenda-jogo">
-        <div class="agenda-jogo-meta">
-          <span>📍 A confirmar</span>
-          <span>📅 A confirmar</span>
-        </div>
-        <div class="agenda-jogo-times">
-          <div class="agenda-time">0
-            <div class="agenda-time-escudo"><img src="NG.png" alt="Camargo FC"></div>
-            <div class="agenda-time-nome">Ass. Esportiva Nova Geração</div>
-          </div>
-          <div class="agenda-vs">VS</div>
-          <div class="agenda-time destaque">
-            <div class="agenda-time-escudo"><img src="LOGOSITE.png" alt="Camargo FC"></div>
-            <div class="agenda-time-nome">Camargo FC</div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -3548,80 +3649,6 @@
         </tr>
           </tbody>
         </table>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GALERIA -->
-<section id="galeria">
-  <div class="container">
-    <div class="section-header">
-      <p class="section-eyebrow">Fotos & Memórias</p>
-      <h2 class="section-title">Galeria</h2>
-      <div class="section-divider"></div>
-    </div>
-
-    <div class="galeria-tabs">
-      <button class="galeria-tab ativo" onclick="abrirGaleria(this,'gal-atletas')">👤 Atletas</button>
-      <button class="galeria-tab" onclick="abrirGaleria(this,'gal-jogos')">⚽ Jogos</button>
-      <button class="galeria-tab" onclick="abrirGaleria(this,'gal-bastidores')">🎬 Bastidores</button>
-      <button class="galeria-tab" onclick="abrirGaleria(this,'gal-titulos')">🏆 Títulos</button>
-    </div>
-
-    <!-- Atletas -->
-    <div id="gal-atletas" class="galeria-tab-content ativo">
-      <div class="galeria-grid">
-        <div class="galeria-aviso" style="grid-column:1/-1; padding:4rem 1rem;">
-          <span class="galeria-aviso-icon">📸</span>
-          <p class="galeria-aviso-text" style="color:#555; font-size:15px;">Fotos dos atletas em breve</p>
-          <p style="color:#444; font-size:12px; margin-top:0.5rem; letter-spacing:1px;">Adicione as imagens para exibir aqui</p>
-        </div>
-        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
-        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
-        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
-      </div>
-    </div>
-
-    <!-- Jogos -->
-    <div id="gal-jogos" class="galeria-tab-content">
-      <div class="galeria-grid">
-        <div class="galeria-aviso" style="grid-column:1/-1; padding:4rem 1rem;">
-          <span class="galeria-aviso-icon">📷</span>
-          <p class="galeria-aviso-text" style="color:#555; font-size:15px;">Fotos dos jogos em breve</p>
-          <p style="color:#444; font-size:12px; margin-top:0.5rem; letter-spacing:1px;">Adicione as imagens para exibir aqui</p>
-        </div>
-        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
-        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
-        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
-      </div>
-    </div>
-
-    <!-- Bastidores -->
-    <div id="gal-bastidores" class="galeria-tab-content">
-      <div class="galeria-grid">
-        <div class="galeria-aviso" style="grid-column:1/-1; padding:4rem 1rem;">
-          <span class="galeria-aviso-icon">🎬</span>
-          <p class="galeria-aviso-text" style="color:#555; font-size:15px;">Bastidores em breve</p>
-          <p style="color:#444; font-size:12px; margin-top:0.5rem; letter-spacing:1px;">Adicione as imagens para exibir aqui</p>
-        </div>
-        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
-        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
-        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
-      </div>
-    </div>
-
-    <!-- Títulos -->
-    <div id="gal-titulos" class="galeria-tab-content">
-      <div class="galeria-grid">
-        <div class="galeria-aviso" style="grid-column:1/-1; padding:4rem 1rem;">
-          <span class="galeria-aviso-icon">🏆</span>
-          <p class="galeria-aviso-text" style="color:#555; font-size:15px;">Fotos dos títulos em breve</p>
-          <p style="color:#444; font-size:12px; margin-top:0.5rem; letter-spacing:1px;">Adicione as imagens para exibir aqui</p>
-        </div>
-        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
-        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
-        <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
       </div>
     </div>
   </div>
