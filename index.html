@@ -728,7 +728,8 @@
     display: flex; align-items: center; justify-content: center;
     overflow: hidden; position: relative;
   }
-  .galeria-card-img img { width: 100%; height: 100%; object-fit: cover; }
+  .galeria-card-img.portrait { aspect-ratio: 3/4; }
+  .galeria-card-img img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
   .galeria-card-img .galeria-placeholder {
     display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
     color: #444;
@@ -1146,12 +1147,15 @@
     <!-- Atletas -->
     <div id="gal-atletas" class="galeria-tab-content ativo">
       <div class="galeria-grid">
-        <div class="galeria-aviso" style="grid-column:1/-1; padding:4rem 1rem;">
-          <span class="galeria-aviso-icon">📸</span>
-          <p class="galeria-aviso-text" style="color:#555; font-size:15px;">Fotos dos atletas em breve</p>
-          <p style="color:#444; font-size:12px; margin-top:0.5rem; letter-spacing:1px;">Adicione as imagens para exibir aqui</p>
+        <div class="galeria-card">
+          <div class="galeria-card-img portrait">
+            <img src="Chico.jpg" alt="Chico – Volante / Meia">
+          </div>
+          <div class="galeria-card-info">
+            <div class="galeria-card-titulo">Chico</div>
+            <div class="galeria-card-desc">Volante / Meia · 26 anos</div>
+          </div>
         </div>
-        <div class="galeria-add-card"><span>＋</span><span><img src="Chico.jpg"></span></div>
         <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
         <div class="galeria-add-card"><span>＋</span><span>Adicionar foto</span></div>
       </div>
